@@ -1,0 +1,146 @@
+body {
+  background: #111;
+  color: #fff;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  margin-top: 0px;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.underline-hover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.underline-hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.underline-hover:hover::after {
+  transform: scaleX(1);
+}
+
+.wave {
+  margin-top: 50px;
+  position: relative;
+
+}
+
+.enter {
+  font-size: 2em;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  padding: 12px 40px;
+  margin: 12px 0 18px 0;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.5s, background-color 0.5s;
+}
+
+.enter:hover {
+  background-color: white;
+  color: black;
+}
+
+.subtitle {
+  font-size: 1.25em;
+  color: #e7a1b0;
+  margin-bottom: 80px;
+}
+
+footer {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+  color: #fff;
+  font-size: 1em;
+}
+
+.icons {
+  position: absolute;
+  right: 60px;
+  top: 50px;
+}
+
+.icons a {
+  margin: 0 10px;
+}
+
+.footer-text {
+  margin-top: 18px;
+}
+
+.heart {
+  font-size: 1.25em;
+  color: #fff;
+  vertical-align: middle;
+}
+
+/* Optional: Animated dots/star circle in top-left */
+.stars {
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  width: 65px;
+  height: 65px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.stars::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 10px 10px, #e7a1b0 4px, transparent 6px),
+    radial-gradient(circle at 50px 10px, #e7a1b0 4px, transparent 6px),
+    radial-gradient(circle at 20px 45px, #e7a1b0 4px, transparent 6px);
+  background-repeat: no-repeat;
+}
+
+/* Responsive text */
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .wave {
+    width: 95vw;
+  }
+
+  .enter {
+    font-size: 1.2em;
+    padding: 8px 24px;
+  }
+}
